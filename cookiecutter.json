@@ -1,0 +1,4 @@
+{
+  "agent_name": "edge-agent",
+  "agent_description": "Edge Agent chassis — workload agent under host supervisor"
+}

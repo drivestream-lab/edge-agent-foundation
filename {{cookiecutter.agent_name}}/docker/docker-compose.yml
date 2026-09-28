@@ -1,0 +1,12 @@
+# Optional local helpers for the workload agent.
+# Device-root MQTT / host supervisor live outside this chassis (product ADRs).
+services:
+  # Placeholder: add inference-engine or scrape targets when product ADRs require them.
+  # agent:
+  #   build:
+  #     context: ..
+  #     dockerfile: Dockerfile
+  #   env_file:
+  #     - ../.env
+  #   volumes:
+  #     - ../data:/app/data

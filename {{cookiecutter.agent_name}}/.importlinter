@@ -1,0 +1,18 @@
+[importlinter]
+root_packages =
+    src
+
+[importlinter:contract:layer-architecture]
+name = Layered architecture — no cross-layer imports
+type = layers
+layers =
+    src.main
+    src.app
+    src.di
+    src.business_services
+    src.infra_services
+    src.configs
+    src.models
+    src.exceptions
+    src.utils
+    src.logging

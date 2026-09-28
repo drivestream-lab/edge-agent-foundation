@@ -1,0 +1,65 @@
+[tool.poetry]
+name = "{{ cookiecutter.agent_name }}"
+version = "0.1.0"
+description = "{{ cookiecutter.agent_description }}"
+authors = ["Engineering Team"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.11,<4.0"
+pydantic = "^2.11.0"
+pydantic-settings = "^2.9.1"
+python-dotenv = "^1.1.0"
+loguru = "^0.7.3"
+injector = "^0.22.0"
+aiosqlite = "^0.21.0"
+httpx = "^0.28.1"
+psutil = "^7.0.0"
+docker = { version = "^7.1.0", optional = true }
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-asyncio = "^0.26.0"
+black = "^25.1.0"
+ruff = "^0.11.6"
+pyright = "^1.1.402"
+import-linter = "^2.3"
+pre-commit = "^4.5.0"
+
+[tool.poetry.extras]
+docker = ["docker"]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests/unit"]
+pythonpath = ["."]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint.per-file-ignores]
+"tests/debug/*.py" = ["E402"]
+"scripts/*.py" = ["E402"]
+
+[tool.pyright]
+pythonVersion = "3.11"
+pythonPlatform = "Linux"
+typeCheckingMode = "basic"
+include = ["src", "tests"]
+venvPath = "."
+venv = ".venv"
+reportMissingImports = true
+reportMissingModuleSource = false
+
+[[tool.pyright.executionEnvironments]]
+root = "."
+pythonVersion = "3.11"
