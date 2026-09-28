@@ -4,6 +4,18 @@ All notable changes to `edge-agent-foundation` are documented here.
 
 ---
 
+## v0.1.1
+
+### Fixed
+
+- Add generated-project `.gitignore` (`.venv/`, `__pycache__/`, `.env`, buffers)
+  so cookiecut + `make setup` cannot stage the virtualenv into the first commit.
+
+### Migration guide
+
+- Remount / re-cookiecut, or copy the `.gitignore` from this tag into existing
+  greenfield clones that still lack `.venv/` ignores.
+
 ## v0.1.0
 
 ### Summary

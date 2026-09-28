@@ -1,0 +1,30 @@
+# Launchpad harness — local skill hubs (re-created by apply-harness)
+.harness/skills/
+.agents/
+.claude/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.import_linter_cache/
+.coverage
+htmlcov/
+
+# Local env / data
+.env
+logs/
+data/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/

@@ -8,7 +8,7 @@ desired-state reconcile, engine-runtime stub, and a **host supervisor client**
 | | |
 |---|---|
 | **Template engine** | Cookiecutter |
-| **Version** | see [`VERSION`](VERSION) (currently **0.1.0**) · [CHANGELOG](CHANGELOG.md) |
+| **Version** | see [`VERSION`](VERSION) (currently **0.1.1**) · [CHANGELOG](CHANGELOG.md) |
 | **License** | [MIT](LICENSE) |
 | **Constitution** | Pin **`edge-agent-rules`** @ **v0.2.0** at `.cursor/rules` |
 | **Stack** | Python 3.11+ · Pydantic v2 · Injector DI · Loguru · SQLite buffers · Docker (optional) |
